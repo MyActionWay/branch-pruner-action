@@ -13,7 +13,7 @@ As [Sacha Willems posted](https://www.saschawillems.de/blog/2017/09/10/how-to-sh
 
 With the GitHub action [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"), you can easily reduce the size of a GitHub repository by manually and/or automatically truncating the old commit history of a selected branch. This means that you can delete all commits with previous and unused file versions up to an arbitrarily selected point in your Git history without losing newer commits with newer file versions of the selected branch tree.
 
-Normally YOU SHOULD NEVER DO THIS and there are [huge drawbacks](#drawbacks "Go there"). However, in some cases it is really useful to get rid of the old stuff on a regular basis. E.&nbsp;g., if your repository size is growing continuously and you only ever need the latest commit history. Or when you encounter problems of a general slowness with Git commands like `push` and `pull`. Then it's time for the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"). It will speed you up again ;).
+Normally YOU SHOULD NEVER DO THIS and there are [huge drawbacks](#-drawbacks "Go there"). However, in some cases it is really useful to get rid of the old stuff on a regular basis. E.&nbsp;g., if your repository size is growing continuously and you only ever need the latest commit history. Or when you encounter problems of a general slowness with Git commands like `push` and `pull`. Then it's time for the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"). It will speed you up again :wink:.
 
 ## | Credits
 
@@ -63,10 +63,10 @@ Oh, you're still here then let's do it.
 
 			# TOKEN and INPUTS as environmental variables
 			env:
-				# Token for all triggers
+			#	Token for all triggers
 				TOKEN: #  e.g. {{ secrets.BRANCH_PRUNER_TOKEN }}
-				# 
-				# Inputs for not manually triggered workflows
+			#
+			#	Inputs for not manually triggered workflows
 				NEW-FIRST-COMMIT: # e.g. commit-hash or HEAD~N etc.
 				REPOSITORY: # target repo e.g. 'dummy/mytargetrepo'
 				BRANCH: # branch to be pruned e.g 'master'
@@ -75,9 +75,9 @@ Oh, you're still here then let's do it.
 
 			# TRIGGERS
 			on:
-				# push:
-				# schedule:
-				#   - cron: '00 23 28 * *'
+			#	push:
+			#	schedule:
+			#		- cron: '00 23 28 * *'
 			```
 		* CONSIDER:
 			* token: never enter the actual value of the personal access token
