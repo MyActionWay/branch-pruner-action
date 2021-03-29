@@ -10,7 +10,7 @@
 
 name: 'Branch-Pruner'
 author: 'Sitdisch'
-description: "Reduces the size of a GitHub repository by manually and/or automatically truncating the old commit history of a selected branch. Newer commits with newer file versions are preserved."
+description: "Reduces the repo-size by manually & automatically truncating a branch's history. Newer commits & file versions are preserved"
 branding:
   icon: scissors
   color: red
