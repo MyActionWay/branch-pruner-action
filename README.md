@@ -49,7 +49,7 @@ Oh, you're still here then let's do it.
 			```yml
 			env:
 			 # Token for all triggers
-			 TOKEN: {{ secrets.BRANCH_PRUNER_TOKEN }}
+			 TOKEN: ${{ secrets.BRANCH_PRUNER_TOKEN }}
 			```
 			* CONSIDER: never enter the actual value of the personal access token
 		* [procedure for manually running a workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github "Learn how")
@@ -64,7 +64,7 @@ Oh, you're still here then let's do it.
 			# TOKEN and INPUTS as environmental variables
 			env:
 			#	Token for all triggers
-				TOKEN: #  e.g. {{ secrets.BRANCH_PRUNER_TOKEN }}
+				TOKEN: #  e.g. ${{ secrets.BRANCH_PRUNER_TOKEN }}
 			#
 			#	Inputs for not manually triggered workflows
 				NEW-FIRST-COMMIT: # e.g. commit-hash or HEAD~N etc.
