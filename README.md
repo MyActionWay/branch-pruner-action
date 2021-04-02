@@ -1,12 +1,7 @@
-# <center>Branch-Pruner | GitHub Action</center>
-
-<center>
-<big>
-CAUTION: IT IS A POWERFUL TOOL AND YOU USE IT AT YOUR OWN RISK. CUTS CAN'T BE UNDONE.
-
-[[MIT License]](https://github.com/myactionway/branch-pruner-action/blob/master/LICENSE.txt "Go there")
-</big>
-</center>
+<h1 align="center">Branch-Pruner | GitHub Action</h1>
+<h3 align="center">CAUTION: IT IS A POWERFUL TOOL AND YOU USE IT AT YOUR OWN RISK. CUTS CAN'T BE UNDONE.</h3>
+<p align="center"><a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/master/LICENSE.txt "Go there""><img src="https://img.shields.io/github/license/myactionway/branch-pruner-action?label=License" /></a>
+<img src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize" /></p>
 <hr>
 
 As [Sacha Willems posted](https://www.saschawillems.de/blog/2017/09/10/how-to-shrink-down-a-github-repository/ "Go there"): <i>"Shrinking a git(hub) repository isn’t just about deleting locally present files but requires cleaning up the history as files that have been removed are still present in the repository’s history and therefore still contribute to it’s size."</i>
@@ -34,9 +29,10 @@ But the Drawbacks are:
 
 Oh, you're still here then let's do it.
 
-1. add the [`branch-pruner.yml`](https://github.com/myactionway/branch-pruner-workflow/.github/workflows/branch-pruner.yml "Get it") workflow file to a repository
+1. add the [`branch-pruner.yml`](https://github.com/MyActionWay/branch-pruner-workflow/blob/master/.github/workflows/branch-pruner.yml "Get it") workflow file to a repository
 	* the path has to be `.github/workflows/branch-pruner.yml`
 	* it doesn't have to be the repository you want to prune; e.&nbsp;g., you can simply [fork](https://github.com/myactionway/branch-pruner-workflow/fork "fork it") the `myactionway/branch-pruner-workflow` repository
+		* CONSIDER: with a forked repository, you need to confirm that you want to use a workflow before you can actually use it (repo menu > actions tab > push the button)
 2. create a new encrypted repository secret [[procedure]](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository "Learn how")
 	* add the secret to the same repository where you added the workflow file
 	* give the secret a name e.&nbsp;g. `BRANCH_PRUNER_TOKEN`
@@ -52,8 +48,10 @@ Oh, you're still here then let's do it.
 			 TOKEN: ${{ secrets.BRANCH_PRUNER_TOKEN }}
 			```
 			* CONSIDER: never enter the actual value of the personal access token
-		* [procedure for manually running a workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github "Learn how")
+		* [procedure for manually running a workflow on GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github "Learn how")
+			<img src="https://raw.githubusercontent.com/sitdisch/cloud/master/images/branchpruner_manual_inputs.png" />
 			* CONSIDER: currently, you can't change the token in the UI
+		* [procedure for manually running a workflow using the REST API](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-using-the-rest-api)
 	* for other triggers
 		* adapt this section
 			```yml
@@ -93,6 +91,8 @@ Oh, you're still here then let's do it.
 			* trigger-schedule:
 				* e.&nbsp;g. `cron: '00 23 28 * *'` executes the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") every 28th day of a month at 23:00
 				* you can check your inputs [here](https://crontab.guru/ "Go there")
+
+That's it. Happy pruning.
 
 ## | Known issues & possible solutions
 
