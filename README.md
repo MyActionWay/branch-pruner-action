@@ -8,7 +8,7 @@ As [Sacha Willems posted](https://www.saschawillems.de/blog/2017/09/10/how-to-sh
 
 With the GitHub action [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"), you can easily reduce the size of a GitHub repository by manually and/or automatically truncating the old commit history of a selected branch. This means that you can delete all commits with previous and unused file versions up to an arbitrarily selected point in your Git history without losing newer commits with newer file versions of the selected branch tree.
 
-Normally YOU SHOULD NEVER DO THIS and there are [huge drawbacks](#-drawbacks "Go there"). However, in some cases it is really useful to get rid of the old stuff on a regular basis. E.&nbsp;g., if your repository size is growing continuously and you only ever need the latest commit history. Or when you encounter problems of a general slowness with Git commands like `push` and `pull`. Then it's time for the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"). It will speed you up again :wink:.
+Normally YOU SHOULD NEVER DO THIS and there are [huge drawbacks](#-drawbacks "Go there"). However, in some cases it is really useful to get rid of the old stuff on a regular basis. E.&nbsp;g., if your repository size is growing continuously and you only ever need the latest commit history. Or when you encounter problems of a general slowness with Git commands like `push` and `pull.` Then it's time for the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"). It will speed you up again :wink:.
 
 ## | Credits
 
@@ -16,10 +16,10 @@ I, [Sitdisch](https://github.com/sitdisch "Visit me"), created the [Branch-Prune
 
 ## | Drawbacks
 
-The [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") rewrites the entire commit history of the branch being pruned. The new history takes the branch-tree of the selected `new-first-commit`. That means all subsequent commits have the old order and be authored by the original sources.
+The [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") rewrites the entire commit history of the branch being pruned. The new history takes the branch-tree of the selected `NEW-FIRST-COMMIT.` That means all subsequent commits have the old order and be authored by the original sources.
 
 But the Drawbacks are:
-* in the `new-first-commit`, the files are marked as created
+* in the `NEW-FIRST-COMMIT`, the files are marked as created
 * all commits have new time stamps and commit-hashes
 * all commits are committed by the selected `User` (default: `github-actions[bot]` )
 * all forks and other branches have nothing to compare with the pruned branch anymore
@@ -80,14 +80,14 @@ Oh, you're still here then let's do it.
 		* CONSIDER:
 			* token: never enter the actual value of the personal access token
 			* inputs:
-				* if any input is blank, one of these default values will be used instead
+				* you only have to insert a `NEW-FIRST-COMMIT`; if any other input is blank, one of these default values will be used instead
 					```yml
 					DEFAULT-REPOSITORY: ${{ github.repository }} # is the repo with this file
 					DEFAULT-BRANCH: 'master'
 					DEFAULT-USER-NAME: 'github-actions[bot]'
 					DEFAULT-USER-EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
 					```
-				* choose your `new-first-commit` carefully; E.&nbsp;g., `HEAD~N` is really useful for autonomously truncating N old commits of a branch on a regular basis. However, know what you are doing. `HEAD~N` or `HEAD^N` may not be the commits you're targeting. For more information about HEAD~N and HEAD^ look e.&nbsp;g. [here](https://stackoverflow.com/questions/2221658/whats-the-difference-between-head-and-head-in-git "Go there").
+				* choose your `NEW-FIRST-COMMIT` carefully; E.&nbsp;g., `HEAD~N` is really useful for autonomously truncating N old commits of a branch on a regular basis. However, know what you are doing. `HEAD~N` or `HEAD^N` may not be the commits you're targeting. For more information about HEAD~N and HEAD^ look e.&nbsp;g. [here](https://stackoverflow.com/questions/2221658/whats-the-difference-between-head-and-head-in-git "Go there").
 			* trigger-schedule:
 				* e.&nbsp;g. `cron: '00 23 28 * *'` executes the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") every 28th day of a month at 23:00
 				* you can check your inputs [here](https://crontab.guru/ "Go there")
