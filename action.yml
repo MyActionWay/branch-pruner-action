@@ -1,7 +1,8 @@
 # Branch-Pruner | GitHub Action
 # 
-# Description: Truncates a branch's old commit history
+# Description: Truncates the old commit history of one/multiple selected target branch(es)
 # Author: Sitdisch
+# Version: v2.0
 # Source: https://github.com/myactionway/branch-pruner-action
 # License: MIT
 # Copyright (c) 2021 Sitdisch
@@ -16,26 +17,26 @@ branding:
   color: red
 
 inputs:
-  new-first-commit:
+  new_first_commit:
     description: 'New first commit'
     required: true
   branch:
     description: 'Branch to be pruned'
     required: true
-  user-name:
+  user_name:
     description: 'User who should commit'
-    required: true
-  user-email:
+    default: 'github-actions[bot]'
+  user_email:
     description: 'User e-mail address'
-    required: true
+    default: '41898282+github-actions[bot]@users.noreply.github.com'
 
 runs:
   using: "composite"
   steps:
     - run: |
-        git config --local user.email ${{ inputs.user-email }}
-        git config --local user.name ${{ inputs.user-name }}
-        COMMIT_ID=$(git rev-parse ${{ inputs.new-first-commit }})
+        git config --local user.email ${{ inputs.user_email }}
+        git config --local user.name ${{ inputs.user_name }}
+        COMMIT_ID=$(git rev-parse ${{ inputs.new_first_commit }})
         COMMIT_MESSAGE=$(git log --format=%B -n 1 "$COMMIT_ID" )" [ Branch-Pruner[bot]: Earlier Commits Truncated ]"
         git checkout --orphan pruner_temp_branch "$COMMIT_ID"
         git commit -m "$COMMIT_MESSAGE"
