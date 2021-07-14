@@ -1,12 +1,12 @@
-<h1 align="center">Branch-Pruner | GitHub Action</h1>
-<p align="center"><img src="https://repository-images.githubusercontent.com/352585084/3bae0d80-bb12-11eb-86c4-c420ef0fec71"/></p>
-<h3 align="center">CAUTION: IT IS A POWERFUL TOOL AND YOU USE IT AT YOUR OWN RISK. CUTS CAN'T BE UNDONE.</h3>
-<p align="center">
-<img src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize" />
-<a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/myactionway/branch-pruner-action?label=License" /></a>
-<a title="Check it out" target="_blank" href="https://github.com/MyActionWay/branch-pruner-action/releases"><img src="https://img.shields.io/github/v/release/myactionway/branch-pruner-action?label=LastRelease" /></a>
-</p>
-<small><p align="center">[ <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-workflows">Workflow Readme</a> == <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action">Action Readme</a> ]</p></small>
+<div align="center">
+<h1>Branch-Pruner | GitHub Action</h1>
+<img src="https://repository-images.githubusercontent.com/352585084/3bae0d80-bb12-11eb-86c4-c420ef0fec71"/>
+<h3>CAUTION: IT IS A POWERFUL TOOL AND YOU USE IT AT YOUR OWN RISK. CUTS CAN'T BE UNDONE.</h3>
+<img height=23 src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize" />
+<a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/master/LICENSE.txt"><img height=23 src="https://img.shields.io/github/license/myactionway/branch-pruner-action?label=License" /></a>
+<a title="Check it out" target="_blank" href="https://github.com/MyActionWay/branch-pruner-action/releases"><img height=23 src="https://img.shields.io/github/v/release/myactionway/branch-pruner-action?label=LastRelease" /></a><br>
+[ <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-workflows">Workflow Readme</a> == <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action">Action Readme</a> ]
+</div>
 <hr>
 
 As [Sacha Willems posted](https://www.saschawillems.de/blog/2017/09/10/how-to-shrink-down-a-github-repository/ "Go there"): <i>"Shrinking a git(hub) repository isn’t just about deleting locally present files but requires cleaning up the history as files that have been removed are still present in the repository’s history and therefore still contribute to it’s size."</i>
@@ -92,7 +92,7 @@ Truncates the old commit history of <b>the current master branch with minimal se
 
 That's it. Happy pruning.
 
-</details><p>
+</details>
 
 ### [branch-pruner-default.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-default.yml "Get it")
 Truncates the old commit history of <b>a selected target branch</b>.
@@ -156,7 +156,7 @@ Truncates the old commit history of <b>a selected target branch</b>.
 
 That's it. Happy pruning.
 
-</details><p>
+</details>
 
 ### [branch-pruner-advanced.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-advanced.yml "Get it")
 Truncates the old commit history of <b>multiple selected target branches</b>.
@@ -212,7 +212,7 @@ Truncates the old commit history of <b>multiple selected target branches</b>.
 					* no predefined inputs; the `env` defined in this workflow file are used instead when this trigger is triggered
 					* [procedure for manually running a workflow on GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github "Learn how")
 					* [procedure for manually running a workflow using the GitHub CLI](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-using-github-cli)
-					* [procedure for manually running a workflow using the REST API](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-using-the-rest-api)<p>
+					* [procedure for manually running a workflow using the REST API](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-using-the-rest-api)<p></p>
 	* define your settings for the different target branches
 		```yml
 		##############################################################
@@ -245,7 +245,7 @@ Truncates the old commit history of <b>multiple selected target branches</b>.
 
 That's it. Happy audits.
 
-</details><p>
+</details>
 
 ## | Known issues & possible solutions
 
