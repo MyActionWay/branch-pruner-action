@@ -266,3 +266,11 @@ That's it. Happy audits.
 For my <a href="https://github.com/mythemeway" title="Explore this" target="_blank"><img src="https://avatars.githubusercontent.com/u/52597090?s=60&amp;v=4" alt="@MyThemeWay" size="25" height="25" width="25" class="avatar "></img></a> [Website-Boilerplates](https://github.com/mythemeway "Go there"), I use the [Lighthouse-Badger](https://github.com/myactionway/lighthouse-badger-action "Get it") :badger: :tokyo_tower: :medal_military: to update automatically my Lighthouse badges and reports once a week. Meanwhile, my repository size continues to grow.
 
 To counter this, I use the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") once a month. That way, I have the repo size under control and also the ability to see the latest history of my badges and reports without the really old stuff.
+
+## | Appendix
+### Note on liability for links
+> * This README contains links to external third-party websites. The README operator has no influence on the content of these sites. Therefore, he cannot assume any liability. Instead, the respective provider is always responsible for the content.
+> * The linked pages were checked for possible legal violations at the time of linking and illegal content wasn't discernible. A permanent control of the linked pages is unreasonable without concrete evidence of an infringement. However, if the README operator becomes aware of such a violation, he will act immediately. 
+
+### Readme uses:
+> * [Shields.io](https://github.com/badges/shields "Check it out") [License: [CC0 1.0](https://github.com/badges/shields/blob/master/LICENSE "Go there")] 
