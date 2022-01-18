@@ -2,9 +2,9 @@
 <h1>Branch-Pruner | GitHub Action</h1>
 <img src="https://repository-images.githubusercontent.com/352585084/3bae0d80-bb12-11eb-86c4-c420ef0fec71"/>
 <h3>CAUTION: IT IS A POWERFUL TOOL AND YOU USE IT AT YOUR OWN RISK. CUTS CAN'T BE UNDONE.</h3>
-<img height=23 src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize" />
-<a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/master/LICENSE.txt"><img height=23 src="https://img.shields.io/github/license/myactionway/branch-pruner-action?label=License" /></a>
-<a title="Check it out" target="_blank" href="https://github.com/MyActionWay/branch-pruner-action/releases"><img height=23 src="https://img.shields.io/github/v/release/myactionway/branch-pruner-action?label=LastRelease" /></a><br>
+<img height="23" src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize" />
+<a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/main/LICENSE.txt"><img height="23" src="https://img.shields.io/github/license/myactionway/branch-pruner-action?label=License" /></a>
+<a title="Check it out" target="_blank" href="https://github.com/MyActionWay/branch-pruner-action/releases"><img height="23" src="https://img.shields.io/github/v/release/myactionway/branch-pruner-action?label=LastRelease" /></a><br>
 [ <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-workflows">Workflow Readme</a> == <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action">Action Readme</a> ]
 </div>
 <hr>
@@ -36,21 +36,21 @@ But the Drawbacks are:
 
 Oh, you're still here then let's do it. First, choose a workflow file:
 
-### [branch-pruner-easy.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-easy.yml "Get it")
-Truncates the old commit history of <b>the current master branch with minimal settings</b>.
+### [branch-pruner-easy.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-easy.yml "Get it")
+Truncates the old commit history of <b>the current main branch with minimal settings</b>.
 
 <details><summary><b>Set it up (click to toggle)</b></summary>
 
-1. add the [branch-pruner-easy.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-easy.yml "Get it") workflow file to a repository
-	* it has to be the target repository where you want to prune the master branch (this is not the case with the other workflow files)
+1. add the [branch-pruner-easy.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-easy.yml "Get it") workflow file to a repository
+	* it has to be the target repository where you want to prune the main branch (this is not the case with the other workflow files)
 	* the path has to be `.github/workflows/branch-pruner-easy.yml`
 2. create a new encrypted repository secret [[procedure](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository "Learn how")]
 	* give the secret a name e.&nbsp;g. `BRANCH_PRUNER_TOKEN`
-	* the value of the secret must be the value of the personal access token for the repository where you want to prune the master branch
+	* the value of the secret must be the value of the personal access token for the repository where you want to prune the main branch
 		* [procedure for creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token "Learn how")
 		* select only the minimum scopes and permissions required e.&nbsp;g. repo and workflow
 	* add the secret to the same repository where you added this workflow file
-3. adapt your [branch-pruner-easy.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-easy.yml "Get it") file
+3. adapt your [branch-pruner-easy.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-easy.yml "Get it") file
 	* for manual triggers
 		* you don't have to adjust anything in the workflow file; just use it
 			* [procedure for manually running a workflow on GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github "Learn how")
@@ -85,7 +85,7 @@ Truncates the old commit history of <b>the current master branch with minimal se
 					* e.&nbsp;g. `cron: '00 23 28 * *'` executes the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") every 28th day of a month at 23:00
 					* you can check your inputs [here](https://crontab.guru/ "Go there")
 			* hidden defaults (changeable with the other workflow files):
-				* target repository & branch: repository with this workflow file and master branch
+				* target repository & branch: repository with this workflow file and main branch
 				* user settings:
 					* user who commit: github-actions[bot]
 					* user e-mail address: 41898282+github-actions[bot]@users.noreply.github.com
@@ -94,12 +94,12 @@ That's it. Happy pruning.
 
 </details>
 
-### [branch-pruner-default.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-default.yml "Get it")
+### [branch-pruner-default.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-default.yml "Get it")
 Truncates the old commit history of <b>a selected target branch</b>.
 
 <details><summary><b>Set it up (click to toggle)</b></summary>
 
-1. add the [branch-pruner-default.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-default.yml "Get it") workflow file to a repository
+1. add the [branch-pruner-default.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-default.yml "Get it") workflow file to a repository
 	* it doesn't have to be the repository you want to prune; e.&nbsp;g., you can simply [fork](https://github.com/myactionway/branch-pruner-workflows/fork "fork it") the `myactionway/branch-pruner-workflows` repository
 		* CONSIDER: with a forked repository, you need to confirm that you want to use a workflow before you can actually use it (repo menu > actions tab > push the button)
 	* the path has to be `.github/workflows/branch-pruner-default.yml`
@@ -109,7 +109,7 @@ Truncates the old commit history of <b>a selected target branch</b>.
 		* [procedure for creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token "Learn how")
 		* select only the minimum scopes and permissions required e.&nbsp;g. repo and workflow
 	* add the secret to the same repository where you added this workflow file
-3. adapt your [branch-pruner-default.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-default.yml "Get it") file
+3. adapt your [branch-pruner-default.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-default.yml "Get it") file
 	* for manual triggers
 		* you don't have to adjust anything in the workflow file; just use it
 			* [procedure for manually running a workflow on GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github "Learn how")
@@ -128,7 +128,7 @@ Truncates the old commit history of <b>a selected target branch</b>.
 				NEW_FIRST_COMMIT: # e.g. commit-hash or HEAD~N etc.
 				TOKEN_NAME: # target token name e.g. 'BRANCH_PRUNER_TOKEN'
 				REPOSITORY: # target repository e.g. 'dummy/mytargetrepo'
-				BRANCH: # branch to be pruned e.g 'master'
+				BRANCH: # branch to be pruned e.g 'main'
 				USER_NAME: # user who should commit e.g. 'dummy'
 				USER_EMAIL: # e.g. 'dummy@gmail.com'
 			
@@ -143,7 +143,7 @@ Truncates the old commit history of <b>a selected target branch</b>.
 				* you only have to define `NEW_FIRST_COMMIT` and `TOKEN_NAME`; if any other input is blank, one of these default values will be used instead
 					```yml
 					DEFAULT_REPOSITORY: ${{ github.repository }} # repo with this file
-					DEFAULT_BRANCH: 'master'
+					DEFAULT_BRANCH: 'main'
 					DEFAULT_USER_NAME: 'github-actions[bot]'
 					DEFAULT_USER_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
 					```
@@ -158,12 +158,12 @@ That's it. Happy pruning.
 
 </details>
 
-### [branch-pruner-advanced.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-advanced.yml "Get it")
+### [branch-pruner-advanced.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-advanced.yml "Get it")
 Truncates the old commit history of <b>multiple selected target branches</b>.
 
 <details><summary><b>Set it up (click to toggle)</b></summary>
 
-1. add the [branch-pruner-advanced.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-advanced.yml "Get it") workflow file to a repository
+1. add the [branch-pruner-advanced.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-advanced.yml "Get it") workflow file to a repository
 	* it doesn't have to be a repository where you want to prune branches; e.&nbsp;g., you can simply [fork](https://github.com/myactionway/branch-pruner-workflows/fork "fork it") the `myactionway/branch-pruner-workflows` repository
 		* CONSIDER: with a forked repository, you need to confirm that you want to use a workflow before you can actually use it (repo menu > actions tab > push the button)
 	* the path has to be `.github/workflows/branch-pruner-advanced.yml`
@@ -173,7 +173,7 @@ Truncates the old commit history of <b>multiple selected target branches</b>.
 		* [procedure for creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token "Learn how")
 		* select only the minimum scopes and permissions required e.&nbsp;g. repo and workflow
 	* add the secrets to the same repository where you added this workflow file
-3. adapt your [branch-pruner-advanced.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/master/.github/workflows/branch-pruner-advanced.yml "Get it") file
+3. adapt your [branch-pruner-advanced.yml](https://github.com/MyActionWay/branch-pruner-workflows/blob/main/.github/workflows/branch-pruner-advanced.yml "Get it") file
 	* define your defaults
 		```yml
 		##############################################################
@@ -220,7 +220,7 @@ Truncates the old commit history of <b>multiple selected target branches</b>.
 		##############################################################
 		-	NAME: 'Pruning Branch 1'
 			NEW_FIRST_COMMIT: 'HEAD~40'
-			BRANCH: 'master'
+			BRANCH: 'main'
 		#	TOKEN_NAME:
 		#	REPOSITORY:
 		#	USER_NAME:
@@ -268,6 +268,11 @@ For my <a href="https://github.com/mythemeway" title="Explore this" target="_bla
 To counter this, I use the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") once a month. That way, I have the repo size under control and also the ability to see the latest history of my badges and reports without the really old stuff.
 
 ## | Appendix
+### Note on protected brand names and logos
+> * The use of protected brand names, trade names, utility models and brand logos on this website does not constitute an infringement of copyright; rather, it serves as an illustrative note. Even if this is not marked as such at the respective points, the corresponding legal provisions always apply.
+> * The brand names and logos used are the property of their respective owners and are subject to their copyright provisions.
+> * This offer is in no way related to the legal entities of the protected brand names and logos used.
+
 ### Note on liability for links
 > * This README contains links to external third-party websites. The README operator has no influence on the content of these sites. Therefore, he cannot assume any liability. Instead, the respective provider is always responsible for the content.
 > * The linked pages were checked for possible legal violations at the time of linking and illegal content wasn't discernible. A permanent control of the linked pages is unreasonable without concrete evidence of an infringement. However, if the README operator becomes aware of such a violation, he will act immediately. 
