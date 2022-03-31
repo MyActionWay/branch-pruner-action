@@ -2,9 +2,9 @@
 <h1>Branch-Pruner | GitHub Action</h1>
 <img src="https://repository-images.githubusercontent.com/352585084/3bae0d80-bb12-11eb-86c4-c420ef0fec71"/>
 <h3>CAUTION: IT IS A POWERFUL TOOL AND YOU USE IT AT YOUR OWN RISK. CUTS CAN'T BE UNDONE.</h3>
-<img height="23" src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize" />
-<a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/main/LICENSE.txt"><img height="23" src="https://img.shields.io/github/license/myactionway/branch-pruner-action?label=License" /></a>
-<a title="Check it out" target="_blank" href="https://github.com/MyActionWay/branch-pruner-action/releases"><img height="23" src="https://img.shields.io/github/v/release/myactionway/branch-pruner-action?label=LastRelease" /></a><br>
+<img height="23" src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize&cacheSeconds=3600" />
+<a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/main/LICENSE.txt"><img height="23" src="https://raw.githubusercontent.com/sitdisch/cloud/master/badges/particle/License-MIT.svg" /></a>
+<a title="Check it out" target="_blank" href="https://github.com/MyActionWay/branch-pruner-action/releases"><img height="23" src="https://img.shields.io/github/v/release/myactionway/branch-pruner-action?label=LastRelease&cacheSeconds=3600" /></a><br>
 [ <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-workflows">Workflow Readme</a> == <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action">Action Readme</a> ]
 </div>
 <hr>
@@ -263,7 +263,7 @@ That's it. Happy audits.
 
 ## | Application example
 
-For my <a href="https://github.com/mythemeway" title="Explore this" target="_blank"><img src="https://avatars.githubusercontent.com/u/52597090?s=60&amp;v=4" alt="@MyThemeWay" size="25" height="25" width="25" class="avatar "></img></a> [Website-Boilerplates](https://github.com/mythemeway "Go there"), I use the [Lighthouse-Badger](https://github.com/myactionway/lighthouse-badger-action "Get it") :badger: :tokyo_tower: :medal_military: to update automatically my Lighthouse badges and reports once a week. Meanwhile, my repository size continues to grow.
+For my <a href="https://github.com/mythemeway" title="Explore this" target="_blank"><img align="top" src="https://avatars.githubusercontent.com/u/52597090?s=60&amp;v=4" alt="@MyThemeWay" size="25" height="25" width="25" class="avatar "></img></a> [Website-Boilerplates](https://github.com/mythemeway "Go there"), I use the [Lighthouse-Badger](https://github.com/myactionway/lighthouse-badger-action "Get it") :badger: :tokyo_tower: :medal_military: to update automatically my Lighthouse badges and reports once a week. Meanwhile, my repository size continues to grow.
 
 To counter this, I use the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") once a month. That way, I have the repo size under control and also the ability to see the latest history of my badges and reports without the really old stuff.
 
