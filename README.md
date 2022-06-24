@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Branch-Pruner | GitHub Action</h1>
-<img src="https://repository-images.githubusercontent.com/352585084/3bae0d80-bb12-11eb-86c4-c420ef0fec71"/>
+<img src="https://repository-images.githubusercontent.com/352585266/cc34310b-3ab2-4085-b5f5-b1b2cc306a64"/>
 <h3>CAUTION: IT IS A POWERFUL TOOL AND YOU USE IT AT YOUR OWN RISK. CUTS CAN'T BE UNDONE.</h3>
 <img height="23" src="https://img.shields.io/github/repo-size/myactionway/branch-pruner-action?label=RepoSize&cacheSeconds=3600" />
 <a title="Check it out" target="_blank" href="https://github.com/myactionway/branch-pruner-action/blob/main/LICENSE.txt"><img height="23" src="https://raw.githubusercontent.com/sitdisch/cloud/master/badges/particle/License-MIT.svg" /></a>
@@ -13,7 +13,7 @@ As [Sacha Willems posted](https://www.saschawillems.de/blog/2017/09/10/how-to-sh
 
 With the GitHub action [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"), you can easily reduce the size of one/multiple GitHub repo(s) by manually and/or automatically truncating the old commit history of one/multiple selected branch(es). This means that you can delete all commits with previous and unused file versions up to an arbitrarily selected point in your Git history without losing newer commits with newer file versions of a selected branch tree.
 
-Normally YOU SHOULD NEVER DO THIS and there are [huge drawbacks](#-drawbacks "Go there"). However, in some cases it is really useful to get rid of the old stuff on a regular basis. E.&nbsp;g., if your repository size is growing continuously and you only ever need the latest commit history. Or when you encounter problems of a general slowness with Git commands like `push` and `pull.` Then it's time for the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"). It will speed you up again :wink:.
+Normally <b>YOU SHOULD NEVER DO THIS</b> and there are [huge drawbacks](#-drawbacks "Go there"). However, in some cases it is really useful to get rid of the old stuff on a regular basis. E.&nbsp;g., if your repository size is growing continuously and you only ever need the latest commit history. Or when you encounter problems of a general slowness with Git commands like `push` and `pull.` Then it's time for the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it"). It will speed you up again :wink:.
 
 ## | Credits
 
