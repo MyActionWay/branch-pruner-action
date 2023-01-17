@@ -263,7 +263,7 @@ That's it. Happy audits.
 
 ## | Application example
 
-For my <a href="https://github.com/mythemeway" title="Explore this" target="_blank"><img align="top" src="https://avatars.githubusercontent.com/u/52597090?s=60&amp;v=4" alt="@MyThemeWay" size="25" height="25" width="25" class="avatar "></img></a> [Website-Boilerplates](https://github.com/mythemeway "Go there"), I use the [Lighthouse-Badger](https://github.com/myactionway/lighthouse-badger-action "Get it") :badger: :tokyo_tower: :medal_military: to update automatically my Lighthouse badges and reports once a week. Meanwhile, my repository size continues to grow.
+For my <a href="https://github.com/mythemeway" title="Explore this" target="_blank"><img align="top" src="https://avatars.githubusercontent.com/u/52597090?s=60&amp;v=4" alt="@MyThemeWay" size="25" height="25" width="25" class="avatar "/></a> [Website-Boilerplates](https://github.com/mythemeway "Go there"), I use the [Lighthouse-Badger](https://github.com/myactionway/lighthouse-badger-action "Get it") :badger: :tokyo_tower: :medal_military: to update automatically my Lighthouse badges and reports once a week. Meanwhile, my repository size continues to grow.
 
 To counter this, I use the [Branch-Pruner](https://github.com/myactionway/branch-pruner-action "Get it") once a month. That way, I have the repo size under control and also the ability to see the latest history of my badges and reports without the really old stuff.
 
