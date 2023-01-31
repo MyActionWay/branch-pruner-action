@@ -424,11 +424,13 @@ To counter this, I use the [Branch-Pruner](https://github.com/myactionway/branch
 
 ### Note on protected brand names and logos
 > * The use of protected brand names, trade names, utility models and brand logos on this website does not constitute an infringement of copyright; rather, it serves as an illustrative note. Even if this is not marked as such at the respective points, the corresponding legal provisions always apply.
+> 
 > * The brand names and logos used are the property of their respective owners and are subject to their copyright provisions.
 > * This offer is in no way related to the legal entities of the protected brand names and logos used.
 
 ### Note on liability for links
 > * This README contains links to external third-party websites. The README operator has no influence on the content of these sites. Therefore, he cannot assume any liability. Instead, the respective provider is always responsible for the content.
+> 
 > * The linked pages were checked for possible legal violations at the time of linking and illegal content wasn't discernible. A permanent control of the linked pages is unreasonable without concrete evidence of an infringement. However, if the README operator becomes aware of such a violation, he will act immediately. 
 
 ### Readme uses:
