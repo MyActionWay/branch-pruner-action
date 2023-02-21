@@ -400,6 +400,10 @@ Truncates the old commit history of <b>multiple selected target branches</b>.
 
 <br>
 
+> <b>**Warning**: If you use your own workflow file, it is highly recommended to set a time limit for the job execution ([GitHub's default](https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits): 6 hours); default in the [proposed workflow files](https://github.com/MyActionWay/branch-pruner-workflows/tree/main/.github/workflows) `timeout-minutes: 8`
+
+<br>
+
 ## | Known issues & possible solutions
 
 > <details><summary><b>The error <i>"fatal: refusing to merge unrelated histories"</i> occurs when you pull the pruned branch back to your local machine:</b></summary>
@@ -428,11 +432,24 @@ Truncates the old commit history of <b>multiple selected target branches</b>.
 > 
 > <p>
 > 
-> * your personal access token used does not have the minimum scopes/permissions required to add the Lighthouse results to your target repository
+> * your personal access token used does not have the minimum scopes/permissions required to prune a branch in your target repository
 > 
 > </p>
 > 
 > </details>
+
+> <details><summary><b>You get a failed job because it exceeded the maximum execution time:</b></summary>
+> 
+> <p>
+> 
+> * increase `timeout-minutes` in your workflow file (default in the [proposed workflow files](https://github.com/MyActionWay/branch-pruner-workflows/tree/main/.github/workflows) = 8min)
+>
+> * if that doesn't help, it could be a general issue with GitHub Actions
+>
+> </p>
+> 
+> </details>
+
 
 > <details><summary><b>The workflow logs do not provide enough detail to diagnose why a workflow, job, or step is not working as expected:</b></summary>
 > 
